@@ -1,5 +1,4 @@
-# Ecsersice 3:SNAKE WATER GUN GAME
-
+# Exercise 5:SNAKE WATER GUN GAME
 try:
 		player = input("Choose your option: ")
 		print("players opion:",player)
