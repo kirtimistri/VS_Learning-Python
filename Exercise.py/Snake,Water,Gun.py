@@ -1,69 +1,24 @@
 # Exercise 5:SNAKE WATER GUN GAME
-try:
-		player = input("Choose your option: ")
-		print("players opion:",player)
-except EOFError as e:
-		print(e)
-	# Control of bad inputsimport random
-print('Snake - Water - Gun')
-# Input no. of rounds
-n = int(input('Enter number of rounds: '))
-# List containing Snake(s), Water(w), Gun(g)
-options = ['s', 'w', 'g']
-# Round numbers
-rounds = 1
-# Count of computer wins
-comp_win = 0
-# Count of player wins
-user_win = 0
-# There will be n rounds of game
-while rounds <= n:
-	# Display round
-	print(f"Round :{rounds}\nSnake - 's'\nWater - 'w'\nGun - 'g'")
-	# Exception handling
-	if player != 's' and player != 'w' and player != 'g':
-		print("Invalid input, try again\n")
-		continue
-	# random.choice() will randomly choose
-	# item from list- options
-	computer = random.choice(options)
-	print("computers option:",computer)
-	# Conditions based on the game rule
-	if computer == 's':
-		if player == 'w':
-			comp_win += 1
-		elif player == 'g':
-			user_win += 1
-
-	elif computer == 'w':
-		if player == 'g':
-			comp_win += 1
-		elif player == 's':
-			user_win += 1
-			
-	elif computer == 'g':
-		if player == 's':
-			comp_win += 1
-		elif player == 'w':
-			user_win += 1
-	# Announce winner of every round
-	if user_win > comp_win:
-		print(f"You Won round {rounds}\n")
-	elif comp_win > user_win:
-		print(f"Computer Won round {rounds}\n")
-	else:
-		print("Draw!!\n")
-	rounds += 1
-# Final winner based on the number of wons
-if user_win > comp_win:
-	print("Congratulations!! You Won")
-elif comp_win > user_win:
-	print("You lose!!")
+import random
+def check(comp, user):
+  if comp ==user:
+    return 0
+  if(comp == 0 and user ==1):
+    return -1  
+  if(comp == 1 and user ==2):
+    return -1   
+  if(comp == 2 and user == 0):
+    return -1
+  return 1
+comp = random.randint(0, 2)
+user = int(input("0 for Snake, 1 for water and 2 for Gun:\n"))
+score = check(comp, user)
+print("You: ", user)
+print("Computer: ", comp)
+if(score == 0):
+  print("Its a draw")
+elif (score == -1):
+  print("You Lose")
 else:
-	print("Match Draw!!")
-
-
-
-
-
-
+  print("You Won")
+  
