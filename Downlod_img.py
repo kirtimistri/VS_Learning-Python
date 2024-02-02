@@ -9,7 +9,7 @@ async def function1():
   response = requests.get(URL)
   open("instagram.ico", "wb").write(response.content)
    
-  return "Harry"
+  return "kirti"
   
 async def function2():
   print("func 2") 
