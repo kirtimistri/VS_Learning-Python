@@ -644,25 +644,25 @@
 # op=int(input(" Enter the operation : 1 for multiplication 2 for division 3 for substraction 4 for addition "))
 # match op:
 #     case 1:
-def event():
-    print("Welcome to indala collaege Events")
-    print("which Event u are going to attend \n 1: sports \n 2: Hacathon \n 3: Cultural ")
-    a= int(input("Enter your choise"))
+# def event():
+#     print("Welcome to indala collaege Events")
+#     print("which Event u are going to attend \n 1: sports \n 2: Hacathon \n 3: Cultural ")
+#     a= int(input("Enter your choise"))
 
-    while (a<=3):
-        print("go to first floor")
-        if a==1:
-            print("go to 2nd floor ")
-        elif a==2:
-            print("go to 3rd floor ")
-        elif a==3:  
-            print ("invalid choise ")
-        else: a==0
-        print("Invalid input ")
+#     while (a<=3):
+#         print("go to first floor")
+#         if a==1:
+#             print("go to 2nd floor ")
+#         elif a==2:
+#             print("go to 3rd floor ")
+#         elif a==3:  
+#             print ("invalid choise ")
+#         else: a==0
+#         print("Invalid input ")
     
 
     
-event()        
+# event()        
         
 
 
